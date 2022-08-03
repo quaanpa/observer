@@ -3,8 +3,10 @@
 #include<iostream>
 #include"iSubcriber.h"
 
-class Subcriber : class iSubcriber
+class Subcriber : public iSubcriber
 {
+public:
+
     Subcriber()
     {
 

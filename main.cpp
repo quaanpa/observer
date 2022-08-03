@@ -1,19 +1,24 @@
 #include <iostream>
 #include <vector>
-#include"iPublisher.h"
 #include"Publisher.h"
-#
+#include"Subcriber.h"
+
 
 
 
 using namespace std;
 
-
-
-
-
 int main()
 {
-    cout << "Hello world!" << endl;
+    Publisher pub;
+    Subcriber sub1;
+    Subcriber sub2;
+
+    pub.registerSubcriber(&sub1);
+    pub.registerSubcriber(&sub2);
+    pub.notify();
+    pub.removeSubcriber(&sub2);
+    pub.notify();
+
     return 0;
 }
